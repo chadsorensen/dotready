@@ -32,10 +32,9 @@
         <!--h1><a href="/">Dot<span class="header_middle">Ready</span>Development</a></h1-->
         <h1><a href="/"><img src="images/logo1.gif" />Chad<span class="header_middle">Sorensen</span></a></h1>
         <nav>
-          <a href="/about" class="active">About</a>
-          <a href="/">Work</a>
-          <a href="/contact">Contact</a>
-          <div class="nav_tab"></div>
+          <a href="/about">About</a>
+          <a href="/" class="active">Work</a>
+          <a href="/contact" class="last">Contact</a>
         </nav>
       </div>
   </header>
@@ -44,34 +43,62 @@
       <div id="work">
         <h2>Work</h2>
         <div class="left_container">
-          <div class="image_container">
-            <div class="slides">
-              <img src="images/groove-slider-1.jpg" />
+          <div class="project_wrap project1">
+            <div class="image_container">
+              <div class="slides">
+                <img src="images/groove-slider-1.jpg" />
+                <img src="images/groove-slider-1.jpg" />
+                <img src="images/groove-slider-1.jpg" />
+                <img src="images/groove-slider-1.jpg" />
+              </div>
+            </div>
+            <div class="project_info">
+              <div class="project_text">
+                <h4>Groove Yoga Bend</h4>
+                <p>Smash and grab site. This single page static site was built in anticipation for opening day. 
+                Got the .psd, sliced it up and brought it to life asap. Rush job <span class="highlight">!=</span> sloppy code.</p>
+              </div>
+              <div class="skills">
+                <h4>Skills</h4>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JS</li>
+                  <li>Photoshop</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="project_info">
-            <div class="project_text">
-              <h4>Groove Yoga Bend</h4>
-              <p>Smash and grab site. This single page static site was built in anticipation for opening day. 
-              Got the .psd, sliced it up and brought it to life asap. Rush job != sloppy code.</p>
+          <div class="project_wrap project2">
+            <div class="image_container">
+              <div class="slides">
+                <img src="images/groove-slider-1.jpg" />
+              </div>
             </div>
-            <div class="skills">
-              <h4>Skills</h4>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JS</li>
-                <li>Photoshop</li>
-              </ul>
+            <div class="project_info">
+              <div class="project_text">
+                <h4>Bonfire</h4>
+                <p>Smash and grab site. This single page static site was built in anticipation for opening day. 
+                Got the .psd, sliced it up and brought it to life asap. Rush job <span class="highlight">!=</span> sloppy code.</p>
+              </div>
+              <div class="skills">
+                <h4>Skills</h4>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JS</li>
+                  <li>Photoshop</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
         <div class="thumbs_container">
           <ul class="thumbs">  
-            <li class="thumb threadfull"><a href=""><div class="caption"><h4>threadfull</h4></div></a></li>
-            <li class="thumb bonfire"><a href=""><div class="caption"><h4>bonfire</h4></div></a></li>
-            <li class="thumb groove active"><a href=""><div class="caption"><h4>Groove Yoga</h4></div></a></li>
-            <li class="thumb siam"><a href=""><div class="caption"><h4>Siam Society</h4></div></a></li>
+            <li class="thumb threadfull" project=".project1"><img alt="Threadfull" src="images/threadfull-thumb.jpg" /><div class="caption"><h4>Threadfull</h4></div></li>
+            <li class="thumb bonfire" project=".project2"><img alt="Bonfire" src="images/bonfire-thumb.jpg" /><div class="caption"><h4>Bonfire</h4></div></li>
+            <li class="thumb groove" project=".project3"><img alt="Groove Yoga" src="images/groove-thumb.jpg" /><div class="caption"><h4>Groove Yoga</h4></div></li>
+            <li class="thumb siam" project=".project4"><div class="caption"><h4>Siam Society</h4></div></li>
           </ul>
         </div>
       </div> <!-- End Work -->
@@ -82,8 +109,8 @@
     <div class="footer_wrap">
       <nav>
         <a href="/about">About</a>
-        <a href="/">Work</a>
-        <a href="/contact">Contact</a>
+        <a href="/" class="active">Work</a>
+        <a href="/contact" class="last">Contact</a>
       </nav>
     </div>
   </footer>
