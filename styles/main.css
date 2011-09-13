@@ -87,6 +87,10 @@ header {
     text-transform: uppercase;
     font-weight: normal;
     font-size: 30px;
+
+    -webkit-transition-property: color;
+    -webkit-transition-duration: .5s;
+    -webkit-transition-timing-function: ease-in;
   }  
     
   h1:hover {
@@ -121,6 +125,10 @@ header {
         color: #B4B3B3;
         text-transform: uppercase;
         z-index: 3;
+
+        -webkit-transition-property: color;
+        -webkit-transition-duration: .5s;
+        -webkit-transition-timing-function: ease-in;
       }
       
         nav li:hover {
