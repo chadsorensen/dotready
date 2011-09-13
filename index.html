@@ -17,6 +17,8 @@
   <meta name="viewport" content="width=device-width; initial-scale=1.0" />
 
   <link rel="stylesheet" href="styles/main.css" type="text/css" />
+  <link rel="stylesheet" href="styles/nivo-slider.css" type="text/css" media="screen" />
+
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
@@ -30,26 +32,108 @@
   <header>
     <div class="header_wrap"> 
         <!--h1><a href="/">Dot<span class="header_middle">Ready</span>Development</a></h1-->
-        <h1><a href="/"><img src="images/logo1.gif" />Chad<span class="header_middle">Sorensen</span></a></h1>
+        <h1 pos="0"><img src="images/logo1.gif" />Chad<span class="header_middle">Sorensen</span></h1>
         <nav>
-          <a href="/about">About</a>
-          <a href="/" class="active">Work</a>
-          <a href="/contact" class="last">Contact</a>
+          <li class="about" pos="-1022">About</li>
+          <li class="work"pos="-2044">Work</li>
+          <li class="contact">Contact</li>
+          <li class="nav_tab"></li>
         </nav>
       </div>
   </header>
   <div id="wrapper">
     <div id="content">
-      <div id="work">
+<!-- Start Home -->    
+      <div id="home" class="main_slide">
+        <h2>Welcome</h2>
+        <div class="left_container">
+          <p>Hello, I am Chad Sorensen. I am a front end developer based out of Portland Oregon. Thanks for checking out my site, I hope you like what you see.</p>
+          <p>I am currently a Developer at <a href="http://roundhouseagency.com" class="accent">RoundHouse Agency</a> .</p>
+        </div>
+      </div>
+<!-- End Home -->
+      <div id="about" class="main_slide">
+        <h2>About Me</h2>
+        <div class="left_container">
+          <p>I am a native Oregonian who loves the outdoors. I studied at the Art Institute of Portland where I received a BA in Web Development and Interactive Media. I started working in the industry when I was a junior and have been working full time ever since.</p>
+
+          <p>Although I love writing semantic markup and bringing designs to life with pixel perfect layout, when I can escape from my computer you can find me riding boards on <span class="secret">frozen water</span> and <span class="secret">salty water</span>, <span class="secret">riding bikes that you don’t have to pedal</span>. I am also an avid <span class="secret">baller</span> and <span class="secret">roller</span>.
+          </p>
+        </div>
+      </div>
+<!-- Start About -->
+<!-- End About -->
+<!-- Start Work -->
+      <div id="work" class="main_slide">
         <h2>Work</h2>
         <div class="left_container">
+<!-- Start Project 1 -->
           <div class="project_wrap project1">
-            <div class="image_container">
-              <div class="slides">
-                <img src="images/groove-slider-1.jpg" />
-                <img src="images/groove-slider-1.jpg" />
-                <img src="images/groove-slider-1.jpg" />
-                <img src="images/groove-slider-1.jpg" />
+            <div class="scrollable">
+                <a class="prev browse left l-arrow disabled"></a>
+                <a class="next browse right r-arrow"></a>
+              <div class="items">
+                <div><img src="images/thread-slider-1.jpg" /></div>
+                <div><img src="images/thread-slider-1.jpg" /></div>
+                <div><img src="images/thread-slider-1.jpg" /></div>
+              </div>
+            </div>
+            <div class="project_info">
+              <div class="project_text">
+                <h4>Threadfull</h4>
+                <p>This was an exercise in rapid web development. I worked with a team, 2 designers and another developer to bring this micro site to life. We only had 3 sessions at 3.5 hours each to get it done.
+                This site was developed using Ruby on Rails and features loads of social media  integration.</p>
+              </div>
+              <div class="skills">
+                <h4>Skills</h4>
+                <ul>
+                  <li>Ruby on Rails</li>
+                  <li>JSON/JS</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Social Media APIs</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+<!-- End Project 1 -->
+<!-- Start Project 2 -->
+          <div class="project_wrap project2">
+            <div class="scrollable">
+                <a class="prev browse left l-arrow"></a>
+                <a class="next browse right r-arrow"></a>
+              <div class="items">
+                <div><img src="images/groove-slider-1.jpg" /></div>
+                <div><img src="images/groove-slider-1.jpg" /></div>
+                <div><img src="images/groove-slider-1.jpg" /></div>
+              </div>
+            </div>
+            <div class="project_info">
+              <div class="project_text">
+                <h4>Bonfire</h4>
+                <p>This site was a mock redesign for the snowboard company Bonfire. It featured their latest product line as well as a custom rotating banner and product slideshow. The minimal design really helped to showcase the product and keep the eye on the prize.</p>
+              </div>
+              <div class="skills">
+                <h4>Skills</h4>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JS</li>
+                  <li>Photoshop</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+<!-- End Project 2 -->
+<!-- Start Project 3 -->
+          <div class="project_wrap project3">
+            <div class="scrollable">
+                <a class="prev browse left l-arrow disabled"></a>
+                <a class="next browse right r-arrow"></a>
+              <div class="items">
+                <div><img src="images/groove-slider-1.jpg" /></div>
+                <div><img src="images/groove-slider-1.jpg" /></div>
+                <div><img src="images/groove-slider-1.jpg" /></div>
               </div>
             </div>
             <div class="project_info">
@@ -69,36 +153,114 @@
               </div>
             </div>
           </div>
-          <div class="project_wrap project2">
-            <div class="image_container">
-              <div class="slides">
-                <img src="images/groove-slider-1.jpg" />
+<!-- End Project 3 -->
+<!-- Start Project 4 -->
+          <div class="project_wrap project4">
+            <div class="scrollable">
+                <a class="prev browse left l-arrow disabled"></a>
+                <a class="next browse right r-arrow"></a>
+              <div class="items">
+                <div><img src="images/siam-slider-1.jpg" /></div>
+                <div><img src="images/siam-slider-1.jpg" /></div>
+                <div><img src="images/siam-slider-1.jpg" /></div>
               </div>
             </div>
             <div class="project_info">
               <div class="project_text">
-                <h4>Bonfire</h4>
-                <p>Smash and grab site. This single page static site was built in anticipation for opening day. 
-                Got the .psd, sliced it up and brought it to life asap. Rush job <span class="highlight">!=</span> sloppy code.</p>
+                <h4>Siam Society</h4>
+                <p>This project was an experiment with the Javascript library jQuery. I tried to make a single page site to reduce load time and to play around with animation and transitions. The navigation contains custom selectors that, when triggered, load content, to not only reduce code but also make the site more dynamic.</p>
               </div>
               <div class="skills">
                 <h4>Skills</h4>
                 <ul>
                   <li>HTML</li>
                   <li>CSS</li>
+                  <li>JS/jQuery</li>
+                  <li>Photoshop</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+<!-- End Project 4 -->
+<!-- Start Project 5 -->
+          <div class="project_wrap project5">
+            <div class="scrollable">
+                <a class="prev browse left l-arrow disabled"></a>
+                <a class="next browse right r-arrow"></a>
+              <div class="items">
+                <div><img src="images/wnb-slider-1.jpg" /></div>
+                <div><img src="images/wnb-slider-1.jpg" /></div>
+                <div><img src="images/wnb-slider-1.jpg" /></div>
+              </div>
+            </div>
+            <div class="project_info">
+              <div class="project_text">
+                <h4>Water &amp; Bodies</h4>
+                <p>This site was a nice solution for a band looking to promote their upcoming album. It was a tie in with their aggressive social media campaign to allow their fans to download their single after signing up for their newsletter or liking them on Facebook.</p>
+              </div>
+              <div class="skills">
+                <h4>Skills</h4>
+                <ul>
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JS/JSON</li>
+                  <li>Photoshop</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+<!-- End Project 5 -->
+<!-- Start Project 6 -->
+          <div class="project_wrap project6">
+            <div class="scrollable">
+                <a class="prev browse left l-arrow disabled"></a>
+                <a class="next browse right r-arrow"></a>
+              <div class="items">
+                <div><img src="images/siam-slider-1.jpg" /></div>
+                <div><img src="images/siam-slider-1.jpg" /></div>
+                <div><img src="images/siam-slider-1.jpg" /></div>
+              </div>
+            </div>
+            <div class="project_info">
+              <div class="project_text">
+                <h4>Demarco Design and Building</h4>
+                <p>Did an update to an existing clients site by adding in an interactive photo gallery of all of their work. Included with that was photo optimization for all of the clients images for faster loading time. I also created a dynamic drop down menu that coincided with the structure of their gallery.</p>
+              </div>
+              <div class="skills">
+                <h4>Skills</h4>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>PHP</li>
                   <li>JS</li>
                   <li>Photoshop</li>
                 </ul>
               </div>
             </div>
           </div>
+<!-- End Project 6 -->
+<!-- End Left Container -->
         </div>
         <div class="thumbs_container">
           <ul class="thumbs">  
-            <li class="thumb threadfull" project=".project1"><img alt="Threadfull" src="images/threadfull-thumb.jpg" /><div class="caption"><h4>Threadfull</h4></div></li>
-            <li class="thumb bonfire" project=".project2"><img alt="Bonfire" src="images/bonfire-thumb.jpg" /><div class="caption"><h4>Bonfire</h4></div></li>
-            <li class="thumb groove" project=".project3"><img alt="Groove Yoga" src="images/groove-thumb.jpg" /><div class="caption"><h4>Groove Yoga</h4></div></li>
-            <li class="thumb siam" project=".project4"><div class="caption"><h4>Siam Society</h4></div></li>
+            <li class="thumb threadfull active" project=".project1">
+              <img alt="Threadfull" src="images/threadfull-thumb.jpg" /><div class="caption"><h4>Threadfull</h4></div>
+            </li>
+            <li class="thumb bonfire" project=".project2">
+              <img alt="Bonfire" src="images/bonfire-thumb.jpg" /><div class="caption"><h4>Bonfire</h4></div>
+            </li>
+            <li class="thumb groove" project=".project3">
+              <img alt="Groove Yoga" src="images/groove-thumb.jpg" /><div class="caption"><h4>Groove Yoga</h4></div>
+            </li>
+            <li class="thumb siam" project=".project4">
+              <img alt="Siam Society" src="images/siam-thumb.jpg" /><div class="caption"><h4>Siam Society</h4></div>
+            </li>
+            <li class="thumb wnb" project=".project5">
+              <img alt="Water &amp; Bodies" src="images/wnb-thumb.jpg" /><div class="caption"><h4>Water &amp; Bodies</h4></div>
+            </li>
+            <li class="thumb siam" project=".project6">
+              <img alt="Demarco Design" src="images/bonfire-thumb.jpg" /><div class="caption"><h4>Demarco Design</h4></div>
+            </li>
           </ul>
         </div>
       </div> <!-- End Work -->
@@ -108,9 +270,9 @@
   <footer>
     <div class="footer_wrap">
       <nav>
-        <a href="/about">About</a>
-        <a href="/" class="active">Work</a>
-        <a href="/contact" class="last">Contact</a>
+          <li class="about" pos="-1022">About</li>
+          <li class="work"pos="-2044">Work</li>
+          <li class="contact">Contact</li>
       </nav>
     </div>
   </footer>
@@ -121,6 +283,18 @@
 <!-- scripts concatenated and minified via ant build script-->
 <script src="js/plugins.js"></script>
 <script src="js/script.js"></script>
+<script src="http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js"></script>
+<script>
+// execute your scripts when the DOM is ready. this is mostly a good habit
+$(function() {
+
+  // initialize scrollable
+  $(".scrollable").scrollable();
+
+});
+</script>
+
+
 <!-- end scripts-->
 
 <script>
