@@ -4,7 +4,7 @@ $(document).ready(function() {
   $('.left_overlay').delay(500).animate({ width: "3%"}, 1500 );
   $('.right_overlay').delay(500).animate({ width: "3%"}, 1500 );
 
-  $(".scrollable").scrollable({ circular: false }).navigator("");
+  $(".scrollable").scrollable({ circular: false }).navigator("a");
 
   $('h1').click(function() {
     $('.nav_tab').stop(true,true).hide();
