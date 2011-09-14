@@ -167,8 +167,8 @@ header {
   }
 
   .content-box {
-    width: 650px;
-    height: 325px;
+    width: 625px;
+    height: 340px;
     position: relative;
     background: url('../images/content-background.png') repeat;
     border: 1px solid #4e4e4e;
@@ -309,12 +309,19 @@ header {
         font-style: italic;
         list-style-type: normal;
       }
-      
-    .thumbs_container {
+    
+    .left_column {
       width: 322px;
       position: absolute;
       top: 20px;
       left: 20px;
+    } 
+
+    .thumbs_container {
+      width: 322px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
     }
     
       .thumb {
@@ -501,9 +508,14 @@ input:focus, textarea:focus {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 1);
 }
 
-#submit {
+input.btn {
+  margin: 5px 10px 0 0;
   display: block;
-  margin-top: 10px;
+  float: left;
+}
+
+textarea {
+  resize: none;
 }
 
 form div.error {
@@ -684,8 +696,8 @@ input {
 }
 .form-stacked {
   position: absolute;
-  right: 0;
-  padding: 10px;
+  top: 18px;
+  right: 10px;
 }
 .form-stacked fieldset {
   padding-top: 0px;
