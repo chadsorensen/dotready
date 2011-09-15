@@ -11,6 +11,9 @@
 /*
  * Resets
  */
+p {
+  line-height: 22px;  
+}
 
 ul, li, a {
   margin: 0px;
@@ -24,9 +27,50 @@ a {
   color: #0076A3;
 }
 
-.highlight {
+.accent {
   color: #fff;
+  -webkit-transition-property: color;
+  -webkit-transition-duration: .5s;
+  -webkit-transition-timing-function: ease-in;
 }
+
+  .accent:hover {
+    color: #0076A3;
+  }
+
+.secret {
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.highlight {
+  color: #049CDB;
+}
+
+.fourlegs:hover {
+  border-bottom: 1px dashed;
+}
+
+.tooltip {
+  display:none;
+  padding: 3px 5px;
+  background: #fff;
+  color: #767676;
+  font-size: 13px;
+
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 1);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 1);
+}
+
+
 
 /*
  * Header/Body
@@ -106,7 +150,7 @@ header {
         font-weight: normal;
         text-transform: uppercase;
     }
-  
+    
     span.header_middle {
       color: #b4b3b3;
     }
@@ -131,6 +175,18 @@ header {
         -webkit-transition-timing-function: ease-in;
       }
       
+      a.view {
+        font-size: 14px;
+        color: #FFF;
+        -webkit-transition-property: color;
+        -webkit-transition-duration: .5s;
+        -webkit-transition-timing-function: ease-in;
+      }
+
+      a.view:hover {
+        color: #0076A3;
+      }
+
         nav li:hover {
           color: #0076A3;
         }
@@ -150,14 +206,14 @@ header {
           z-index: 2;
         }
 
-
 #content {
   width: 100000px;
   height: 600px;
   margin: 75px 0;
   position: relative;
 }
-
+  
+  #fourlegs,
   #work {
     background: url("../images/content-background.png") repeat scroll 0 0 transparent;
     border: 1px solid #4E4E4E;
@@ -192,6 +248,7 @@ header {
  * Slide Show
  */
 
+#fourlegs,
 #work {
   width: 1019px;
   height: 600px;
@@ -209,6 +266,25 @@ header {
     width: 635px;
     margin: 20px 20px 10px;
   }
+
+    .left_container.content-box {
+      width: 960px;
+      margin: 0;
+      padding: 20px 20px 10px;
+    }
+
+      .left_container.content-box .left-column {
+        width: 450px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+
+      .right-column {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
 
   .project_wrap {
     position: absolute;
@@ -294,8 +370,10 @@ header {
     }  
       
       .project_text p {
-        color: #fff;
+        margin: 5px 0;
+        color: #B4b3b3;
         font-size: 12px;
+        line-height: 17px;
       } 
 
     .skills {
@@ -307,6 +385,7 @@ header {
         color: #B4B3B3;
         font-size: 12px;
         font-style: italic;
+        line-height: 17px;
         list-style-type: normal;
       }
     
@@ -810,7 +889,11 @@ footer {
   z-index: 3;
 }
 
-.footer_wrap {
-  width: 1020px;
-  margin: 0px auto;
-}
+  .footer_wrap {
+    width: 1020px;
+    margin: 0px auto;
+  }
+
+    .footer_wrap nav {
+      padding-top: 10px;
+    }

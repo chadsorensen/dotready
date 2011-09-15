@@ -21,8 +21,13 @@
 
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
   <script src="js/libs/modernizr-2.0.6.min.js"></script>
+  <script src="js/jquery.form.js"></script>
+  <script src="js/jquery.placeholder.js"></script>
+  <script src="js/jquery.validate.js"></script>
   
 </head>
 
@@ -47,20 +52,37 @@
         <h2>Welcome</h2>
         <div class="left_container">
           <p>Hello, I am Chad Sorensen. I am a front end developer based out of Portland Oregon. Thanks for checking out my site, I hope you like what you see.</p>
+          <p>You might be wondering why I left the <span class="highlight">E</span> from my last name out of the address? I did it for you! Most people
+          can't remember if my last name is Sorens<span class="highlight">e</span>n or Sorens<span class="highlight">o</span>n so decided to just eliminate the confusion.</p>
           <p>I am currently a Developer at <a href="http://roundhouseagency.com" class="accent">Roundhouse Agency</a> .</p>
         </div>
       </div>
 <!-- End Home -->
+<!-- Start About -->
       <div id="about" class="main_slide">
         <h2>About Me</h2>
-        <div class="left_container">
+        <div class="left_container content-box">
+          <div class="left-column">
           <p>I am a native Oregonian who loves the outdoors. I studied at the Art Institute of Portland where I received a BA in Web Development and Interactive Media. I started doing freelance work when I was a sophomore and have been working full time ever since.</p>
 
-          <p>Although I love writing semantic markup and bringing designs to life with pixel perfect layout, when I can escape from my computer you can find me riding boards on <span class="secret">frozen water</span> and <span class="secret">salty water</span>, <span class="secret">riding bikes that you don’t have to pedal</span>. I am also an avid <span class="secret">baller</span> and <span class="secret">roller</span>.
+          <p>Although I love writing semantic markup and bringing designs to life with pixel perfect layout, when I can escape from my computer you can find me riding boards on 
+          <span class="secret accent" title="Snowboarding!">frozen water</span><span class="tooltip"></span> 
+          and 
+          <span class="secret accent" title="Surfing!">salty water</span>, 
+          <span class="secret accent" title="Motorcycles!">riding bikes that you don’t have to pedal</span>. 
+          I am also an avid 
+          <span class="secret accent" title="Pinball!">baller</span> 
+          and 
+          <span class="secret accent" title="Bowling!">roller</span>. 
+          I am also the proud parent of two 
+          <span class="secret accent fourlegs" title="Dogs!" pos="-4887">4-legged sons</span>!
           </p>
+          </div>
+          <div class="right-column">
+            <img src="images/chad.jpg" />
+          </div>
         </div>
       </div>
-<!-- Start About -->
 <!-- End About -->
 <!-- Start Work -->
       <div id="work" class="main_slide">
@@ -83,7 +105,8 @@
               <div class="project_text">
                 <h4>Threadfull</h4>
                 <p>This was an exercise in rapid web development. I worked with a team, 2 designers and another developer to bring this micro site to life. We only had 3 sessions at 3.5 hours each to get it done.
-                This site was developed using Ruby on Rails and features loads of social media  integration.</p>
+                This site was developed using Ruby on Rails and features loads of social media integration.</p>
+                <a href="http://threadfull.rubypdx.com/" target="_blank" class="view">View Site</a>
               </div>
               <div class="skills">
                 <h4>Skills</h4>
@@ -115,7 +138,8 @@
               <div class="project_text">
                 <h4>Clackamas River Basin Council</h4>
                 <p>This was a really fun project where I got to give back to the community. The CRBC is a non-profit
-                dedicated to educating about the natural resource conservation and preserve of watershed for future generations. This site included a full admin interface built using Refinery, a Ruby CMS.</p>
+                dedicated to educating about the natural resource conservation and preserve of watershed for future generations. This site was brought together with a team of designer and developers from the Art Institute and featured a full admin interface built using Refinery, a Ruby CMS.</p>
+                <a href="http://clackamasriver.org/" target="_blank" class="view">View Site</a>
               </div>
               <div class="skills">
                 <h4>Skills</h4>
@@ -146,6 +170,7 @@
               <div class="project_text">
                 <h4>Water &amp; Bodies</h4>
                 <p>This site was a nice solution for a band looking to promote their upcoming album. It was a tie in with their aggressive social media campaign to allow their fans to download their single after signing up for their newsletter or liking them on Facebook.</p>
+                <a href="http://waterandbodies.com/" target="_blank" class="view">View Site</a>
               </div>
               <div class="skills">
                 <h4>Skills</h4>
@@ -177,6 +202,7 @@
                 <h4>Groove Yoga Bend</h4>
                 <p>Smash and grab site. This single page static site was built in anticipation for opening day. 
                 Got the .psd, sliced it up and brought it to life asap. Rush job <span class="highlight">!=</span> sloppy code.</p>
+                <a href="http://grooveyogabend.com/" target="_blank" class="view">View Site</a>
               </div>
               <div class="skills">
                 <h4>Skills</h4>
@@ -207,6 +233,7 @@
               <div class="project_text">
                 <h4>Siam Society</h4>
                 <p>This project was an experiment with the Javascript library jQuery. I tried to make a single page site to reduce load time and to play around with animation and transitions. The navigation contains custom selectors that, when triggered, load content to only reduce code and make the site more dynamic.</p>
+                <a href="http://dotreadydevelopment.com/siam" target="_blank" class="view">View Site</a>
               </div>
               <div class="skills">
                 <h4>Skills</h4>
@@ -236,6 +263,7 @@
               <div class="project_text">
                 <h4>Demarco Design and Building</h4>
                 <p>Did an update to an existing clients site by adding in an interactive photo gallery of all of their work. Included with that was photo optimization for all of the clients images for faster loading time. I also created a dynamic drop down menu that coincided with the structure of their gallery.</p>
+                <a href="http://www.demarcodesignandbuilding.com/" target="_blank" class="view">View Site</a>
               </div>
               <div class="skills">
                 <h4>Skills</h4>
@@ -250,8 +278,9 @@
             </div>
           </div>
 <!-- End Project 6 -->
-<!-- End Left Container -->
         </div>
+<!-- End Left Container -->
+<!-- Start Thumb Container -->
         <div class="thumbs_container">
           <ul class="thumbs">  
             <li class="thumb threadfull active" project=".project1">
@@ -291,19 +320,19 @@
             <fieldset>    
               <div class="first"> 
                 <label for="name">Name *</label>
-                <input type="text" name="name" placeholder="What You Call Yourself">
+                <input type="text" name="name" placeholder="What You Call Yourself" class="required">
               </div> 
               <div> 
                 <label for="email">E-mail *</label>
-                <input type="email" name="email" placeholder="youremail@aol.com">
+                <input type="email" name="email" placeholder="youremail@aol.com" class="required email">
               </div>  
               <div>  
                 <label for="website">Website</label>
-                <input type="url" name="url" placeholder="www.turntable.fm">
+                <input placeholder="http://turntable.fm">
               </div>  
               <div>  
                 <label for="message">Comment *</label>
-                <textarea name="message" placeholder="What Can I Do For You?"></textarea>
+                <textarea name="message" placeholder="What Can I Do For You?" class="required"></textarea>
               </div> 
               <input class="btn primary" type="submit" name="submit" id="submit" value="Holler!" />
               <input class="btn" type="reset" name="reset" value="Clear!" />
@@ -312,15 +341,73 @@
           </form>
         </div><!-- /end .content-box -->
       </div><!-- /end #contact-form -->
+<!-- Start 4Legs -->
+      <div id="fourlegs" class="main_slide">
+        <h2>4 Leggers</h2>
+        <div class="left_container">
+<!-- Start Taj -->
+          <div class="project_wrap project1">
+            <div class="scrollable">
+                <a class="prev browse left l-arrow disabled"></a>
+                <a class="next browse right r-arrow"></a>
+              <div class="items">
+                <div><img src="images/taj1.jpg" /></div>
+                <div><img src="images/taj2.jpg" /></div>
+                <div><img src="images/taj3.jpg" /></div>
+                <div><img src="images/taj4.jpg" /></div>
+                <div><img src="images/taj5.jpg" /></div>
+              </div>
+            </div>
+            <div class="project_info">
+              <div class="project_text">
+                <h4>Taj</h4>
+              </div>
+            </div>
+          </div>
+<!-- End Taj -->
+<!-- Start Odie -->
+          <div class="project_wrap project2">
+            <div class="scrollable">
+                <a class="prev browse left l-arrow"></a>
+                <a class="next browse right r-arrow"></a>
+              <div class="items">
+                <div><img src="images/odie1.jpg" /></div>
+                <div><img src="images/odie2.jpg" /></div>
+                <div><img src="images/odie3.jpg" /></div>
+                <div><img src="images/odie4.jpg" /></div>
+                <div><img src="images/odie5.jpg" /></div>
+              </div>
+            </div>
+            <div class="project_info">
+              <div class="project_text">
+                <h4>Odie</h4>
+              </div>
+            </div>
+          </div>
+<!-- End Odie -->
+        </div>
+<!-- End Left Container -->
+<!-- Start Thumb Container -->
+        <div class="thumbs_container">
+          <ul class="thumbs">  
+            <li class="thumb taj active" project=".project1">
+              <img alt="Taj" src="images/taj-thumb.jpg" /><div class="caption"><h4>Taj</h4></div>
+            </li>
+            <li class="thumb odie" project=".project2">
+              <img alt="Odie" src="images/odie-thumb.jpg" /><div class="caption"><h4>Odie</h4></div>
+            </li>
+          </ul>
+        </div>
+      </div> <!-- End Work -->
     </div> <!-- End Content -->
   </div> <!-- End Wrapper -->
 
   <footer>
     <div class="footer_wrap">
       <nav>
-          <li class="about" pos="-1022">About</li>
-          <li class="work"pos="-2044">Work</li>
-          <li class="contact">Contact</li>
+        <li class="about" pos="-1222">About</li>
+        <li class="work" pos="-2444">Work</li>
+        <li class="contact" pos="-3665">Contact</li>
       </nav>
     </div>
   </footer>
@@ -332,25 +419,41 @@
 <script src="js/plugins.js"></script>
 <script src="js/script.js"></script>
 <script src="http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js"></script>
-<script>
 
+<script>
+if (!Modernizr.input.placeholder){
+      $('input[placeholder], textarea[placeholder]').placeholder();
+}
+</script>
+
+<script>
 // execute your scripts when the DOM is ready. this is mostly a good habit
 $(function() {
 
   // initialize scrollable
   $(".scrollable").scrollable();
 
+
+
 });
 </script>
 
-<!-- end scripts-->
-
 <script>
-	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
-	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-	s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
+    $(function() {
+    $('#contact').validate({
+    submitHandler: function(form) {
+        $(form).ajaxSubmit({
+        url: 'process.php',
+        success: function() {
+          $('#contact').hide();
+          $('#contact-form').append("<p class='thanks'>Thanks! Your request has been sent.</p>")
+        }
+          });
+        }
+      });         
+    });
+  </script>
+<!-- end scripts-->
 
 <!--[if lt IE 7 ]>
 	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>

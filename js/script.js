@@ -18,6 +18,18 @@ $(document).ready(function() {
     });
   });
 
+  $('.fourlegs').click(function() {
+    $('.nav_tab').stop(true,true).hide();
+    $('nav li').removeClass('active');
+    
+    contentPos = parseInt($(this).attr('pos'));
+    
+    $('#content').animate({
+      left: contentPos
+    }, 750, function() {
+      });
+    });
+
   $('nav li').click(function() {
 
     contentPos = parseInt($(this).attr('pos'));
@@ -61,5 +73,28 @@ $(document).ready(function() {
       $(this).find('.caption').stop(false,true).fadeIn(200);
     }
   );
+var $tooltip;
+  $(".secret").hover(function($tooltip) {
+    $tooltip = $(this).find('.tooltip');
+    return $tooltip;
+  });
+
+$(".secret[title]").tooltip({
+    // use div.tooltip as our tooltip
+    tip: '.tooltip',
+
+    // use the fade effect instead of the default
+    effect: 'fade',
+
+    // make fadeOutSpeed similar to the browser's default
+    fadeOutSpeed: 100,
+
+    // the time before the tooltip is shown
+    predelay: 400,
+
+    // tweak the position
+    position: "top left",
+    offset: [-180, -155]
+  });
 
 });
