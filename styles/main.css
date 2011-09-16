@@ -32,6 +32,10 @@ a {
   -webkit-transition-property: color;
   -webkit-transition-duration: .5s;
   -webkit-transition-timing-function: ease-in;
+
+  -moz-transition-property: color;
+  -moz-transition-duration: .5s;
+  -moz-transition-timing-function: ease-in;
 }
 
   .accent:hover {
@@ -135,6 +139,10 @@ header {
     -webkit-transition-property: color;
     -webkit-transition-duration: .5s;
     -webkit-transition-timing-function: ease-in;
+
+    -moz-transition-property: color;
+    -moz-transition-duration: .5s;
+    -moz-transition-timing-function: ease-in;
   }  
     
   h1:hover {
@@ -146,7 +154,6 @@ header {
     h2 {
         color: #767676;
         background-color: none;
-        //text-align: center;
         font-weight: normal;
         text-transform: uppercase;
     }
@@ -173,6 +180,10 @@ header {
         -webkit-transition-property: color;
         -webkit-transition-duration: .5s;
         -webkit-transition-timing-function: ease-in;
+
+      -moz-transition-property: color;
+      -moz-transition-duration: .5s;
+      -moz-transition-timing-function: ease-in;
       }
       
       a.view {
@@ -181,6 +192,10 @@ header {
         -webkit-transition-property: color;
         -webkit-transition-duration: .5s;
         -webkit-transition-timing-function: ease-in;
+
+        -moz-transition-property: color;
+        -moz-transition-duration: .5s;
+        -moz-transition-timing-function: ease-in;
       }
 
       a.view:hover {
@@ -597,24 +612,19 @@ textarea {
   resize: none;
 }
 
-form div.error {
+form .error {
   background: #fae5e3;
-  padding: 10px 0;
-  margin: -10px 0 10px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
 }
-form div.error > label, form div.error span.help-inline, form div.error span.help-block {
+form .error > label, form .error span.help-inline, form .error span.help-block {
   color: #9d261d;
 }
-form div.error input, form div.error textarea {
+form input.error , form textarea.error {
   border-color: #c87872;
   -webkit-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
   -moz-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
   box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
 }
-form div.error input:focus, form div.error textarea:focus {
+form .error:focus {
   border-color: #b9554d;
   -webkit-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
   -moz-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);

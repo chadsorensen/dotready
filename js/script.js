@@ -95,6 +95,10 @@ $(".secret[title]").tooltip({
     // tweak the position
     position: "top left",
     offset: [-180, -155]
-  });
+});
+
+   
+     
+
 
 });

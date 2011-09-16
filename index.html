@@ -138,7 +138,7 @@
               <div class="project_text">
                 <h4>Clackamas River Basin Council</h4>
                 <p>This was a really fun project where I got to give back to the community. The CRBC is a non-profit
-                dedicated to educating about the natural resource conservation and preserve of watershed for future generations. This site was brought together with a team of designer and developers from the Art Institute and featured a full admin interface built using Refinery, a Ruby CMS.</p>
+                dedicated to educating about natural resource conservation. This site was brought together with a team of designer and developers from the Art Institute and featured a full admin interface built using Refinery, a Ruby CMS.</p>
                 <a href="http://clackamasriver.org/" target="_blank" class="view">View Site</a>
               </div>
               <div class="skills">
@@ -319,20 +319,20 @@
           <form id="contact" class="form-stacked" method="post" action="">
             <fieldset>    
               <div class="first"> 
-                <label for="name">Name *</label>
-                <input type="text" name="name" placeholder="What You Call Yourself" class="required">
+                <label for="name">Name <span class="highlight">*</span></label>
+                <input id="emailName" type="text" name="name" placeholder="What You Call Yourself" class="required">
               </div> 
               <div> 
-                <label for="email">E-mail *</label>
-                <input type="email" name="email" placeholder="youremail@aol.com" class="required email">
-              </div>  
+                <label for="email">E-mail <span class="highlight">*</span></label>
+                <input id="emailFrom" type="email" name="email" placeholder="youremail@aol.com" class="required email">
+              </div>
+              <div> 
+                <label for="url">Website </label>
+                <input id="emailURL" type="url" name="website" placeholder="http://turntable.fm/pdxdev" class="url">
+              </div>    
               <div>  
-                <label for="website">Website</label>
-                <input placeholder="http://turntable.fm">
-              </div>  
-              <div>  
-                <label for="message">Comment *</label>
-                <textarea name="message" placeholder="What Can I Do For You?" class="required"></textarea>
+                <label for="message">Comment <span class="highlight">*</span></label>
+                <textarea id="emailMessage" name="message" placeholder="What Can I Do For You?" class="required"></textarea>
               </div> 
               <input class="btn primary" type="submit" name="submit" id="submit" value="Holler!" />
               <input class="btn" type="reset" name="reset" value="Clear!" />
@@ -437,30 +437,75 @@ $(function() {
 
 });
 </script>
-
 <script>
-    $(function() {
-    $('#contact').validate({
-    submitHandler: function(form) {
-        $(form).ajaxSubmit({
-        url: 'process.php',
-        success: function() {
-          $('#contact').hide();
-          $('#contact-form').append("<p class='thanks'>Thanks! Your request has been sent.</p>")
+ $("#submit").click(function(){                                     
+        var hasError = false;
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+        var emailFromVal = $("#emailFrom").val();
+        if(emailFromVal == '') {
+            $("#emailFrom").addClass("error");
+            hasError = true;
+        } else if(!emailReg.test(emailFromVal)) {   
+            $("#emailFrom").addClass("error");
+            hasError = true;
         }
-          });
+        else
+        {
+            $("#emailFrom").removeClass("error");
         }
-      });         
+
+        var nameVal = $("#emailName").val();
+        if(nameVal == '') {
+            $("#emailName").addClass("error");
+            hasError = true;
+        }
+        else
+        {
+            $("#emailName").removeClass("error");
+        }
+
+        var urlVal = $("#emailURL").val();
+
+        var messageVal = $("#emailMessage").val();
+        if(messageVal == '') {
+            $("#emailMessage").addClass("error");
+            hasError = true;
+        }
+        else
+        {
+            $("#emailMessage").removeClass("error");
+        }
+
+
+        if(hasError == false) {
+            $(this).hide();
+            $("fieldset").fadeOut("medium", function(){
+              $('#contact').append('<p class="highlight">Hey, thanks for that! <br /> I will try to get back to you ASAP</p>');
+            });
+            
+            $.post("process.php",
+                { emailFrom: emailFromVal, emailName: nameVal, emailURL: urlVal, emailMessage: messageVal },
+                    function(data){
+                        $("#loadingImage").fadeOut("fast", function() {                
+                            $("#loadingImage").before('<p class="">Thanks!</p>');                                            
+                        });
+                    }
+                 );
+        }
+
+        return false;
     });
-  </script>
+
+</script>
+
 <!-- end scripts-->
 
 <!--[if lt IE 7 ]>
-	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
-	<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+  <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
 <![endif]-->
 
 
 </body>
 </html>
-
